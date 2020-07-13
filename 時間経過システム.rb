@@ -1,5 +1,5 @@
 =begin
-  時間経過システム ver1.0
+  時間経過システム ver1.1
   byうなぎおおとろ(Twitter http://twitter.com/unagiootoro8388)
 
   歩くたびに時間が経過する古典的な時間経過システムを導入するスクリプトです。
@@ -169,8 +169,7 @@ class RPG::Map
 end
 
 
-class Game_Party
-
+class Game_Player
   alias advance_time__increase_steps increase_steps
   private :advance_time__increase_steps
 
@@ -178,7 +177,6 @@ class Game_Party
     advance_time__increase_steps
     $game_map.advance_time if $game_map.advance_time_map?
   end
-
 end
 
 
